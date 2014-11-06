@@ -1,0 +1,28 @@
+{
+  "name": "Div Extractor",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Select a single html element as the root of the page",
+  "homepage_url": "http://github.com/PhilReinhold/div_extractor",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "browser action demo"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [{
+    "js": ["js/jquery/jquery.js"],
+    "matches": ["http://*/*", "https://*/*"]
+  }]
+}
